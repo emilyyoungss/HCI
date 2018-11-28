@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <title>Add Units</title>
+<style>
+body{
+  background:lightgrey;
+ font-family: 'Aclonica';font-size: 22px;
+}
+.container{
+  max-width:800px;
+  margin:0;
+  height: 20em;
+  font-family: sans-serif;
+  border-style: solid;
+  border-width: 10px;
+  border-color: skyblue;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+.month{
+  text-align: center;
+  background-color: skyblue;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  color: white;
+  padding: 25px;
+  border: 1px solid black;
+}
+table, th, td{
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  font-size: 17px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+tr, th, td{
+  padding: 15px;
+}
+th{
+  background-color: white;
+  color: skyblue;
+}
+td{
+  background-color: skyblue;
+}
+#red{
+  background-color: red;
+}
+#green{
+  background-color: green;
+}
+td:hover{
+  background-color: white;
+  color: skyblue;
+}
+       ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+/* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+</style>
+</head>
+
+<dy>
+<h1> Boo's Tracker </h1>
+<ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="calendar1.html">Calendar</a></li>
+      <li><a href="stats.html">Stats</a></li>
+</ul>
+<div class = "container">
+  <dir class = "box"><h2>Add Units</h2><br>
+    <form action="/action_page.php">
+      Wine: <input type="number" name="Number" value=""><br>
+    <select>
+      <option value="day">Small Glass</option>
+      <option value="week">Medium Glass</option>
+      <option value="month">Large Glass</option>
+      <option value="year">Bottle</option>
+      <select>
+</form>
+<br>
+<form action="/action_page.php">
+Beer/Cider: <input type="number" name="Number" value=""><br>
+<select>
+  <option value="day">Pint</option>
+  <option value="week">Half-Pint</option>
+  <select>
+</form>
+<br>
+<form action="/action_page.php">
+Spirits: <input type="number" name="Number" value=""><br>
+<select>
+  <option value="day">Single Shot</option>
+  <option value="week">Double Shot</option>
+  <option value="month">Triple Shot</option>
+  <option value="year">Bottle</option>
+  <select>
+</form>
+
+<button onclick="location.href = 'file:///C:/Users/emily/PycharmProjects/HCI/venv/Lib/HCI/HCI/stats.html'"id="myButton" class="float-left submit-button" >Submit</button>
+  </dir>
+</div>
+
+</body>
+</html>

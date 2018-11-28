@@ -1,0 +1,127 @@
+<html>
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <title> Stats </title>
+<style>
+body{
+  background:lightgrey;
+ font-family: 'Aclonica';font-size: 22px;
+}
+.container{
+  max-width:800px;
+  margin:auto;
+  font-family: sans-serif;
+}
+
+.left{
+    float:left;
+
+}
+
+.right{
+    float:right;
+    left: 50%;
+}
+.month{
+  text-align: center;
+  background-color: skyblue;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  color: white;
+  padding: 25px;
+  border: 1px solid black;
+}
+table, th, td{
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  font-size: 17px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+tr, th, td{
+  padding: 15px;
+}
+th{
+  background-color: white;
+  color: skyblue;
+}
+td{
+  background-color: skyblue;
+}
+#red{
+  background-color: red;
+}
+#green{
+  background-color: green;
+}
+td:hover{
+  background-color: white;
+  color: skyblue;
+}
+       ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+/* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+</style>
+</head>
+
+<body>
+  <h1> Boo's Tracker</h1>
+  <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="calendar2.html">Calendar</a></li>
+  </ul>
+  <div id="units" class="left"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <div id="calories" class="right"></div>
+  <script>
+        var data = [{
+            x: ['user', 'recommended', 'average'],
+            y: [7.9, 3.3, 5.9],
+            type: 'bar'
+        }];
+
+        var layout = {
+            title:'Consumption of alcohol per unit'
+        }
+        Plotly.newPlot('units', data, layout);
+
+        var caloriesData = [{
+            x: ['user', 'recommended', 'average'],
+            y: [581, 243, 459],
+            type: 'bar'
+        }];
+
+        var caloriesLayout = {
+            title: 'Calorie counter from alcohol consumption'
+        }
+
+        Plotly.newPlot('calories', caloriesData, caloriesLayout)
+
+  </script>
+
+
+</body>
+</html>
